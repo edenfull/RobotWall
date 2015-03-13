@@ -1,0 +1,30 @@
+var fontObj = require("./font.js"),
+		signObj = require("./sign.js");
+
+var SignClient = function(glyphsPath, lowLevelPath) {
+		this.glyphsPath = glyphsPath;
+		this.lowLevelPath = lowLevelPath;
+};
+
+SignClient.prototype.sendTextToSign = function(data) {
+		var font = fontObj.returnSignFont(this.glyphsPath);
+		var LEDsign = new signObj.Sign(this.lowLevelPath);
+
+		var matrix = font.multilineRender(data, LEDsign.SCREEN_HEIGHT/2,
+																			{
+																					"ignore_shift_h": true,
+																					"distance": 0,
+																					"fixed_width": LEDsign.SCREEN_WIDTH
+																			});
+
+//		console.log(matrix);
+		
+		if (!matrix) return false;
+
+		var textForSign = new signObj.SpecialArray().zeroOne(matrix);
+
+		LEDsign.pic(textForSign);
+		return true;
+};
+
+module.exports.SignClient = SignClient;

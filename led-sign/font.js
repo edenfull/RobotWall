@@ -154,7 +154,7 @@ Font.prototype.multilineRender = function(lines, lineHeight, options) {
 				}
 		}
 		
-		return canvas;
+		return canvas.trim();
 };
 
 var returnSignFont = function(glyphsPath) {

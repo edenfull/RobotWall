@@ -9,16 +9,9 @@ var Sign = function(lowLevelPath) {
 Sign.prototype.pic = function(data) {
 		var argms = [this.SCRIPT, "--type=pic"];
 		var p = child.spawn("/usr/bin/perl", argms);
-//		p.stdin.pipe(data);
-};
-
-var SpecialArray = function() {
-		this.zeroOne = function(data) {
-				return data.map(function(row) {
-						row.join("");
-				}).join("\n");
-		};
+		console.log(data);
+		p.stdin.write(data);
+		p.stdin.end();
 };
 
 module.exports.Sign = Sign;
-module.exports.SpecialArray = SpecialArray;

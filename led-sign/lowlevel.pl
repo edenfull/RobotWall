@@ -16,7 +16,7 @@ my $sign=Device::MiniLED->new(devicetype => "sign");
 
 my $type = 'text';
 my $speed = 1;
-my $effect = 'scroll';
+my $effect = 'hold';
 
 my $options_result = GetOptions(
   'type=s' => \$type,
@@ -91,4 +91,4 @@ for my $message_data (@messages) {
 #         effect => "scroll",
 #         speed => 3
 # );
-$sign->send(device => "/dev/ttyUSB0");
+$sign->send(device => "/dev/tty.usbserial");

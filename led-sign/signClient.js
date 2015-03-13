@@ -11,11 +11,9 @@ SignClient.prototype.sendTextToSign = function(data) {
 		var LEDsign = new signObj.Sign(this.lowLevelPath);
 
 		var matrix = font.multilineRender(data, LEDsign.SCREEN_HEIGHT/2,
-																			{
-																					"ignore_shift_h": true,
-																					"distance": 0,
-																					"fixed_width": LEDsign.SCREEN_WIDTH
-																			});
+																			{	"ignore_shift_h": true,
+																				"distance": 0,
+																				"fixed_width": LEDsign.SCREEN_WIDTH });
 		
 		if (!matrix) return false;
 

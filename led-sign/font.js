@@ -142,11 +142,11 @@ Font.prototype.multilineRender = function(lines, lineHeight, options) {
 		var renderedLines = lines.map(function(line) {
 				return self.render(line, lineHeight, options);
 		});
-
+		
 		var canvas = "";
 		for (var i = 0, len = renderedLines.length; i < len; i++) {
 				for (var j = 1, lenj = renderedLines[i].length; j < lenj; j++) {
-						for (var k = 0, lenk = renderedLines[i][j].length; k < lenk; k++) {
+						for (var k = 2, lenk = renderedLines[i][j].length; k < lenk; k++) {
 								canvas += renderedLines[i][j][k];
 						}
 

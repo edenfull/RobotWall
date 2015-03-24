@@ -23,7 +23,7 @@ var displayDay = function() {
 		current.sendTextToSign(today.getDate());				
 };
 
-// Change the display every 30 seconds.
+// Change the display every 15 seconds.
 Repeat(displayText).every("45", "s").for("60", "min").start.now();
 Repeat(displayDay).every("45", "s").for("60", "min").start.in("15", "s");
 Repeat(displayWeather).every("45", "s").for("60", "min").start.in("30", "s");

@@ -16,7 +16,7 @@ my $sign=Device::MiniLED->new(devicetype => "sign");
 
 my $type = 'text';
 my $speed = 1;
-my $effect = 'hold';
+my $effect = 'snow';
 
 my $options_result = GetOptions(
   'type=s' => \$type,
@@ -70,25 +70,4 @@ for my $message_data (@messages) {
   }
 }
 
-# #
-# # add a text only message
-# #
-# $sign->addMsg(
-#     data => "test",
-#     effect => "scroll",
-#     speed => 4
-# );
-# #
-# # create a picture and an icon from built-in clipart
-# #
-# my $pic=$sign->addPix(clipart => "zen16");
-# my $icon=$sign->addIcon(clipart => "heart16");
-# #
-# # add a message with the picture and animated icon we just created
-# #
-# $sign->addMsg(
-#         data => "Message 2 with a picture: $pic and an icon: $icon",
-#         effect => "scroll",
-#         speed => 3
-# );
 $sign->send(device => "/dev/tty.usbserial");

@@ -8,10 +8,11 @@ var Promise = require("bluebird"),
 
 var current = new client.SignClient(glyphsPath, pwd);
 
-// Welcome message.
-current.sendTextToSign(["Andie + Eden", "= Awesomeness"]);
+// Custom  message.
+var displayText = function() {
+		current.sendTextToSign(["Andie + Eden", "= Awesomeness"]);		
+};
 
-// Change the display every 30 seconds.
 var displayWeather = function() {
 		weather.getWeather().then(function(weatherData) {
 				current.sendTextToSign(weatherData);
@@ -21,6 +22,8 @@ var displayWeather = function() {
 var displayDay = function() {
 		current.sendTextToSign(today.getDate());				
 };
-		
-Repeat(displayDay).every("30", "s").for("60", "min").start.in("15", "s");
-Repeat(displayWeather).every("30", "s").for("60", "min").start.in("30", "s");
+
+// Change the display every 30 seconds.
+Repeat(displayText).every("45", "s").for("60", "min").start.now();
+Repeat(displayDay).every("45", "s").for("60", "min").start.in("15", "s");
+Repeat(displayWeather).every("45", "s").for("60", "min").start.in("30", "s");

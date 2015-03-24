@@ -1,9 +1,9 @@
 var getDate = function() {
 		var moment = require("moment"),
-				today = moment().format("Q: ddd, MMM Do"),
+				today = moment().format("ddd, MMM Do"),
 				time = moment().format("h:mm a");
 		
-		return ["Q" + today, time];
+		return [today, time];
 };
 
 module.exports.getDate = getDate;

@@ -84,7 +84,7 @@ Font.prototype.render = function(string, height, options) {
 				if (!result[row]) result[row] = [];
 				result[row][col] = buf[xy];
 		}
-		
+
 		var text_width = width;
 		var image_width = options["fixed_width"] || width;
 		
@@ -129,7 +129,7 @@ Font.prototype.render = function(string, height, options) {
 						if (Number(expanded_row[i]) != 1) expanded_row[i] = 0;
 						else expanded_row[i] = Number(expanded_row[i]);
 				}
-				
+
 				return expanded_row;
 		});
 
@@ -138,7 +138,7 @@ Font.prototype.render = function(string, height, options) {
 
 Font.prototype.multilineRender = function(lines, lineHeight, options) {
 		var self = this;
-
+		
 		var renderedLines = lines.map(function(line) {
 				return self.render(line, lineHeight, options);
 		});

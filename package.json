@@ -18,6 +18,8 @@
   "homepage": "https://github.com/edenfull/RobotWall",
   "dependencies": {
     "bluebird": "^2.9.14",
+    "moment": "^2.9.0",
+    "repeat": "0.0.6",
     "request-promise": "^0.4.0"
   }
 }

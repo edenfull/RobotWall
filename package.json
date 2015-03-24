@@ -2,9 +2,10 @@
   "name": "RobotWall",
   "version": "1.0.0",
   "description": "Display important information on an LED sign.",
-  "main": "index.js",
+  "main": "./led-sign/run.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+			"test": "echo \"Error: no test specified\" && exit 1",
+			"start": "node ./led-sign/run.js"
   },
   "repository": {
     "type": "git",

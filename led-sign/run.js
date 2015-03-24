@@ -4,7 +4,7 @@ var Promise = require("bluebird"),
 		weather = require("../messages/getWeather.js"),
 		today = require("../messages/getDate.js"),
 		pwd = __dirname,
-		glyphsPath = "./glyphs/";
+		glyphsPath = "./led-sign/glyphs/";
 
 var current = new client.SignClient(glyphsPath, pwd);
 

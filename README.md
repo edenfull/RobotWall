@@ -3,9 +3,9 @@ Robot Wall is an [LED sign](http://brightledsigns.com/programmable/indoor/bs-4x1
 
 ![alt tag](https://raw.githubusercontent.com/edenfull/RobotWall/master/img/robotwall.jpg)
 
-Now I know I need to bring an umbrella! Thanks, Robot Wall! I chose the weather information (low/high) to be displayed in both Celsius and Fahrenheit since I refuse to use Fahrenheit and Andie refuses to use Celsius. :)
+Now I will never forget birthdays, and I know I need to bring an umbrella today! Thanks, Robot Wall! I chose the weather information (low/high) to be displayed in both Celsius and Fahrenheit since I refuse to use Fahrenheit and Andie refuses to use Celsius. :)
 
-Robot Wall is a Node.js port of [metral's LED sign](https://github.com/metral/led_sign) and [pshved's Muni sign](https://github.com/pshved/muni-led-sign).
+Robot Wall is a Node.js port of [metral's LED sign](https://github.com/metral/led_sign) and [pshved's Muni sign](https://github.com/pshved/muni-led-sign). I built this project as a way to continue building my JavaScript and Node.js skills. 
 
 ## How It Works
 Using pshved's [Perl wrapper](https://github.com/pshved/muni-led-sign/blob/master/client/lowlevel.pl), the message to be displayed is converted into its corresponding glyphs of 0's/1's to inform each LED of the sign to be on/off. The glyphs are flattened into a string to be passed in as serial port data. For example, "Hello World" with each word on its own line looks like this:
@@ -44,6 +44,10 @@ system_profiler SPUSBDataType
 ```
 ls /dev/*usb*
 ```
+
+## Future Work
+* It might be nice in the future to build a web interface that could make it significantly easier to manage the content that is displayed on the screen.
+* Storing data in a text file is a very hacky approach. I didn't need a database for such small pieces of information that didn't need to be stored for more than a few minutes, but it's definitely not good practice for a real application.
 
 ## Dedication
 This code is dedicated to the love of my life, Andie, who also came up with the name for this project. Thank you for inspiring me to build technical skills while making our home a more welcoming place.

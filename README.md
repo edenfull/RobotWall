@@ -1,6 +1,7 @@
 ## About Robot Wall
 Robot Wall is an [LED sign](http://brightledsigns.com/programmable/indoor/bs-4x16-mini) that displays [weather](http://openweathermap.org/api), date and countdown information. I wanted to have a display that would quickly tell me the information I need to know as I head out the door (without having to fumble with an app using my phone).
 
+![alt tag](https://raw.githubusercontent.com/edenfull/RobotWall/master/img/robotwall2.JPG)
 ![alt tag](https://raw.githubusercontent.com/edenfull/RobotWall/master/img/robotwall.jpg)
 
 Now I will never forget birthdays, and I know I need to bring an umbrella today! Thanks, Robot Wall! I chose the weather information (low/high) to be displayed in both Celsius and Fahrenheit since I refuse to use Fahrenheit and Andie refuses to use Celsius. :)

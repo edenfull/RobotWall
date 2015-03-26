@@ -1,0 +1,38 @@
+var getWeather = function() {
+		var rp = require("request-promise"),
+				Promise = require("bluebird");
+		
+		var key = "d92fae1687d55d691bf54f9722f1f8a6",
+				city = "5128581",
+				raw = {},
+				displayMsg = [];
+
+		var pullData = function() {
+				var options = {
+						uri: "http://api.openweathermap.org/data/2.5/forecast/daily?id=" + city + "&units=metric&mode=json&cnt=1&APPID=" + key,
+						method: "GET" };
+
+				var promise = rp(options).then(function(res) {
+						raw = JSON.parse(res);
+				}, function(err) {
+						console.log(err);
+				});
+
+				return promise;
+		};
+
+		pullData().then(function() {
+				var dayC = Math.round(raw.list[0].temp.day),
+						nightC = Math.round(raw.list[0].temp.night),
+						dayF = Math.round(dayC * 9 / 5 + 32),
+						nightF = Math.round(nightC * 9 / 5 + 32);
+				
+				displayMsg.push(raw.list[0].weather[0].main);
+				displayMsg.push("D: " + dayC + "C/" + dayF + "F, N: " + nightC + "C/" + nightF + "F");
+
+				console.log(displayMsg)l
+				return displayMsg;
+		});
+};
+
+module.exports = getWeather;

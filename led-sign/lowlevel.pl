@@ -1,5 +1,5 @@
 #!/usr/bin/perl -w
-# This script simply udpates the sign with more data.  If you need to write a
+# This script simply updates the sign with more data.  If you need to write a
 # more sophisticated client, just call this file from somewhere else.
 # 
 # Usage:
@@ -16,7 +16,7 @@ my $sign=Device::MiniLED->new(devicetype => "sign");
 
 my $type = 'text';
 my $speed = 1;
-my $effect = 'snow';
+my $effect = 'hold';
 
 my $options_result = GetOptions(
   'type=s' => \$type,
@@ -65,8 +65,8 @@ for my $message_data (@messages) {
     $sign->addMsg(
       data => $message_data->{data},
       effect => (length($message_data->{data}) > 13) ? 'scroll' : 'hold',
-      speed => $speed,
-    );
+			  slot => 2
+				);
   }
 }
 

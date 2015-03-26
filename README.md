@@ -1,5 +1,9 @@
 ## About Robot Wall
-Robot Wall is an [LED sign](http://brightledsigns.com/programmable/indoor/bs-4x16-mini) that displays [weather](http://openweathermap.org/api) and date information. I wanted to have a display that would quickly tell me the information I need to know as I head out the door (without having to fumble with an app using my phone).
+Robot Wall is an [LED sign](http://brightledsigns.com/programmable/indoor/bs-4x16-mini) that displays [weather](http://openweathermap.org/api), date and countdown information. I wanted to have a display that would quickly tell me the information I need to know as I head out the door (without having to fumble with an app using my phone).
+
+![alt tag](https://raw.githubusercontent.com/edenfull/RobotWall/master/img/robotwall.jpg)
+
+Now I know I need to bring an umbrella! Thanks, Robot Wall! I chose the weather information (low/high) to be displayed in both Celsius and Fahrenheit since I refuse to use Fahrenheit and Andie refuses to use Celsius. :)
 
 Robot Wall is a Node.js port of [metral's LED sign](https://github.com/metral/led_sign) and [pshved's Muni sign](https://github.com/pshved/muni-led-sign).
 

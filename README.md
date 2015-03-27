@@ -1,5 +1,5 @@
 ## About Robot Wall
-Robot Wall is an [LED sign](http://brightledsigns.com/programmable/indoor/bs-4x16-mini) that displays [weather](http://openweathermap.org/api), date and countdown information. I wanted to have a display that would quickly tell me the information I need to know as I head out the door (without having to fumble with an app using my phone).
+Robot Wall is an [LED sign](http://brightledsigns.com/programmable/indoor/bs-4x16-mini) that displays [weather](http://openweathermap.org/api), date and countdown information with the help of a Raspberry Pi running Node.js. I wanted to have a display that would quickly tell me the information I need to know as I head out the door (without having to fumble with an app using my phone).
 
 ![alt tag](https://raw.githubusercontent.com/edenfull/RobotWall/master/img/robotwall2.JPG)
 ![alt tag](https://raw.githubusercontent.com/edenfull/RobotWall/master/img/robotwall.jpg)
@@ -29,7 +29,9 @@ Using pshved's [Perl wrapper](https://github.com/pshved/muni-led-sign/blob/maste
 If you squint, you can kinda see it. :)
 
 ## Installation
-Fork or download a local version of this repo. In your command line:
+1. [Set up your Raspberry Pi](http://www.raspberrypi.org/help/quick-start-guide/) with all of the standard configurations. 
+2. Ensure you have [Node.js installed](https://learn.adafruit.com/node-embedded-development/installing-node-dot-js).
+3. Clone a local version of this repo. In your command line:
 ```
 cd [your RobotWall directory]
 npm install

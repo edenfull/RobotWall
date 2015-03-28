@@ -71,4 +71,4 @@ for my $message_data (@messages) {
 		}
 }
 
-$sign->send(device => "/dev/tty.usbserial");
+$sign->send(device => "/dev/ttyUSB0");
